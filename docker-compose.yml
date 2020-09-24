@@ -1,0 +1,14 @@
+version: '2'
+services:
+  dss7:
+    image: dataiku/dss:7.0.2
+    container_name: dss7
+    volumes:
+      - /data:/home/dataiku/dss
+      - ./requirements.txt:/home/dataiku/requirements.txt
+    mem_limit: 12g
+    environment:
+      - http_proxy=${http_proxy}
+      - https_proxy=${https_proxy}
+    ports:
+      - 10000:10000
