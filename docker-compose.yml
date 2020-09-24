@@ -1,8 +1,8 @@
 version: '2'
 services:
-  dss7:
+  dataiku:
     image: dataiku/dss:7.0.2
-    container_name: dss7
+    container_name: dataiku
     volumes:
       - /data:/home/dataiku/dss
       - ./requirements.txt:/home/dataiku/requirements.txt
