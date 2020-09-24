@@ -1,10 +1,10 @@
 version: '2'
 services:
-  dataiku:
+  dss:
     image: dataiku/dss:7.0.2
-    container_name: dataiku
+    container_name: dss
     volumes:
-      - /data:/home/dataiku/dss
+      - /data/dss:/home/dataiku/dss
       - ./requirements.txt:/home/dataiku/requirements.txt
     mem_limit: 12g
     environment:
